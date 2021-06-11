@@ -12,7 +12,7 @@ public class Customer
         private String name,surname,emailAddress,homeAddress;
         private long phoneNumber;
 
-    private Customer(Builder builder)
+    Customer(Builder builder)
         {
             this.customerID = builder.customerID;
             this.name = builder.name;
@@ -22,7 +22,11 @@ public class Customer
             this.phoneNumber = builder.phoneNumber;
         }
 
-        @Override
+    public Customer() {
+
+    }
+
+    @Override
         public String toString() {
         return "Customer{" +
                 "customerID=" + customerID +
@@ -34,7 +38,12 @@ public class Customer
                 '}';
     }
 
-        public static class Builder
+    public int multiply(int num1, int num2)
+    {
+        return num1 * num2;
+    }
+
+    public static class Builder
         {
 
             private int customerID;

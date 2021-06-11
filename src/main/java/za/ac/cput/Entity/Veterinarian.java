@@ -1,7 +1,8 @@
 package za.ac.cput.Entity;
 /*
-   Veterinarian Entity with builder Pattern
-    Author: Nonhlahla Hlungwani 218160658
+    Veterinarian.java
+    Veterinarian Entity with builder Pattern
+    Author: Nonhlahla Hlungwani (218160658)
     Date: 04 June 2021
  */
 

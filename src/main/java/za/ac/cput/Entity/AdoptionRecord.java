@@ -19,13 +19,16 @@ public class AdoptionRecord {// start of AdoptionRecord class
     private Date date;
 
     //Constructor
-    private AdoptionRecord(Builder builder)
+    public AdoptionRecord(Builder builder)
     {
         this.adoptionId = builder.adoptionId;
         this.customerId = builder.customerId;
         this.date = builder.date;
         this.dogId = builder.dogId;
         this.staffId = builder.staffId;
+    }
+    public AdoptionRecord() {
+
     }
 
     //toString method
@@ -44,11 +47,11 @@ public class AdoptionRecord {// start of AdoptionRecord class
     public static class Builder {
 
         //Attributes
-        public int adoptionId;
-        public int customerId;
-        public Date date;
-        public int dogId;
-        public int staffId;
+        private int adoptionId;
+        private int customerId;
+        private Date date;
+        private int dogId;
+        private int staffId;
 
         //Builder initialisation
         public Builder setAdoptionId(int adoptionId) {

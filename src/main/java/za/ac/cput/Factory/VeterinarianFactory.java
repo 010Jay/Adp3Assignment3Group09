@@ -10,7 +10,7 @@ import za.ac.cput.Entity.Veterinarian;
     Date: 05 June 2021
  */
 public class VeterinarianFactory {
-    private static int vetID =0;
+    private static int vetID =30;
 
 
     public Veterinarian createVeterinarian(String name , String surname, long phoneNumber, String emailAddress) {

@@ -4,9 +4,9 @@ Author:Andy William Hine (219259038)
 Date:07 June 2021
  */
 
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
-import za.ac.cput.Entity.Customer;
+import za.ac.cput.entity.Customer;
 
 public class CustomerFactory
 {

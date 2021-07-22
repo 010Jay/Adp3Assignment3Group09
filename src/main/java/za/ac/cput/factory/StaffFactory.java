@@ -1,6 +1,6 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
-import za.ac.cput.Entity.Staff;
+import za.ac.cput.entity.Staff;
 
 public class StaffFactory {
 

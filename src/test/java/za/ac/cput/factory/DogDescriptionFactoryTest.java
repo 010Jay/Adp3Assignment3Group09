@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
     DogDescriptionFactoryTest.java
@@ -11,11 +11,9 @@ package za.ac.cput.Factory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import za.ac.cput.Entity.DogDescription;
+import za.ac.cput.entity.DogDescription;
 
 import java.time.Duration;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DogDescriptionFactoryTest {
 

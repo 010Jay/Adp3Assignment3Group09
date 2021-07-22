@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 /*
     AdoptionRecordFactoryTest.java
     Test Case for the AdoptionRecordTestFactory
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
-import za.ac.cput.Entity.AdoptionRecord;
+import za.ac.cput.entity.AdoptionRecord;
 
 import java.util.Date;
 

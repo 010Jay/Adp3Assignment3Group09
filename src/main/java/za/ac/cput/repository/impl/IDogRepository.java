@@ -8,4 +8,5 @@ import java.util.Set;
 public interface IDogRepository extends IRepository<Dog, Integer> {
 
     Set<Dog> getAll();
+    Integer getSize();
 }

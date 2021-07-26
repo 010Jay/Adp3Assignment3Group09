@@ -1,7 +1,7 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 
-import za.ac.cput.Entity.Veterinarian;
+import za.ac.cput.entity.Veterinarian;
 
 /*
     VeterinarianFactory.java

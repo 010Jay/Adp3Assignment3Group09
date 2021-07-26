@@ -1,7 +1,7 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.Entity.Staff;
+import za.ac.cput.entity.Staff;
 
 public class StaffFactoryTest {
 

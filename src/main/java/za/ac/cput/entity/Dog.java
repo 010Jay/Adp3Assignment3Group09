@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 /*
     Dog.java
@@ -116,6 +116,10 @@ public class Dog {
                     return this;
                 }
         }
+
+    public int getDogId() {
+        return dogId;
+    }
 
     //toString method
         @Override

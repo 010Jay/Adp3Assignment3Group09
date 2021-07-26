@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
     DogFactory.java
@@ -7,7 +7,7 @@ package za.ac.cput.Factory;
     Date: 05 June 2021
  */
 
-import za.ac.cput.Entity.Dog;
+import za.ac.cput.entity.Dog;
 
 public class DogFactory {
 

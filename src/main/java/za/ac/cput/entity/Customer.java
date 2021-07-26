@@ -4,7 +4,7 @@ Author:Andy William Hine (219259038)
 Date:04 June 2021
  */
 
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 public class Customer
 {

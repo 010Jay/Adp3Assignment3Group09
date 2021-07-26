@@ -36,12 +36,20 @@ public class Veterinarian {
                 '}';
     }
 
+    public int getVetId() {
+
+        return getVetId();
+    }
+
+
     public static class Builder{
         private int vetId;
         private String name;
         private String surname;
         private long phoneNumber;
         private String emailAddress;
+
+
 
         public Builder setVetId(int vetId) {
             this.vetId = vetId;
@@ -72,6 +80,8 @@ public class Veterinarian {
         {
             return new Veterinarian(this);
         }
+
+
         public Builder copy(Veterinarian veterinarian)
         {
             this.vetId = veterinarian.vetId;

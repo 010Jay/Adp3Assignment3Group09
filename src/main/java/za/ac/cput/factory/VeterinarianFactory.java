@@ -13,7 +13,7 @@ public class VeterinarianFactory {
     private static int vetID =30;
 
 
-    public Veterinarian createVeterinarian(String name , String surname, long phoneNumber, String emailAddress) {
+    public static Veterinarian createVeterinarian(String name, String surname, long phoneNumber, String emailAddress) {
 
             return new Veterinarian.Builder()
                 .setVetId(++vetID)

@@ -1,4 +1,4 @@
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 /*
     Veterinarian.java
     Veterinarian Entity with builder Pattern

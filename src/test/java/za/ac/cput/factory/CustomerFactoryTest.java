@@ -3,13 +3,13 @@ Test for the CustomerFactory
 Author:Andy William Hine (219259038)
 Date:10 June 2021
  */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
-import za.ac.cput.Entity.Customer;
+import za.ac.cput.entity.Customer;
 
 import java.util.concurrent.TimeUnit;
 

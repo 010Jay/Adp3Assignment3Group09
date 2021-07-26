@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
     DogFactoryTest.java
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
-import za.ac.cput.Entity.Dog;
+import za.ac.cput.entity.Dog;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,6 +28,7 @@ class DogFactoryTest {
     }
 
     @Timeout(5) //Timeout test
+
     @Test
     public void testCreateDog()
     {

@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 
 /*
@@ -9,7 +9,7 @@ package za.ac.cput.Factory;
  */
 import org.junit.jupiter.api.*;
 
-import za.ac.cput.Entity.Veterinarian;
+import za.ac.cput.entity.Veterinarian;
 
 import static org.junit.jupiter.api.Assertions.*;
 

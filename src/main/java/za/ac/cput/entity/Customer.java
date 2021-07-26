@@ -4,11 +4,15 @@ Author:Andy William Hine (219259038)
 Date:04 June 2021
  */
 
-package za.ac.cput.Entity;
+package za.ac.cput.entity;
 
 public class Customer
 {
-        private int customerID;
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    private int customerID;
         private String name,surname,emailAddress,homeAddress;
         private long phoneNumber;
 
@@ -42,6 +46,7 @@ public class Customer
     {
         return num1 * num2;
     }
+
 
     public static class Builder
         {
@@ -84,7 +89,7 @@ public class Customer
                 return new Customer(this);
             }
 
-            private Builder copy(Customer customer)
+            public Builder copy(Customer customer)
             {
                 this.customerID = customer.customerID;
                 this.name = customer.name;

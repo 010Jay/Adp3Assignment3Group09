@@ -1,4 +1,4 @@
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 /*
     AdoptionRecordFactory.java
@@ -8,7 +8,7 @@ package za.ac.cput.Factory;
  */
 
 
-import za.ac.cput.Entity.AdoptionRecord;
+import za.ac.cput.entity.AdoptionRecord;
 
 import java.util.Date;
 

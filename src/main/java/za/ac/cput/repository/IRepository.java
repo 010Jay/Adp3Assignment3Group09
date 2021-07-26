@@ -1,9 +1,11 @@
 package za.ac.cput.repository;
 
+//Generic Repository interface
+
 public interface IRepository<T,ID>
 {
-  public T create(T t);
-  public T read(ID id);
-  public T update(T t);
-  public boolean delete(ID id);
+  T create(T t);
+  T read(ID id);
+  T update(T t);
+  boolean delete(ID id);
 }

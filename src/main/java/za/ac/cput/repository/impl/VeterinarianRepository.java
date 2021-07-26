@@ -1,6 +1,7 @@
 package za.ac.cput.repository.impl;
 
 
+import za.ac.cput.entity.Dog;
 import za.ac.cput.entity.Veterinarian;
 import za.ac.cput.factory.VeterinarianFactory;
 
@@ -14,29 +15,53 @@ public class VeterinarianRepository {
   {
       this.veterinarianDb=new HashSet<>();
   }
-  public Veterinarian create(String name)
+  public Veterinarian create(Veterinarian vet)
   {
-      Veterinarian veterinarian = VeterinarianFactory.createVeterinarian(name);
+
       this.veterinarianDb.add(veterinarian);
       return veterinarian;
   }
-    public Veterinarian read(int vetId)
+    public Veterinarian read(int Id)
     {
         Veterinarian veterinarian = null;
         for ( Veterinarian vet : veterinarianDb)
         {
-            if (vet.get)
+            if (Id.equals(vet.getVetId()))
+            {
+                veterinarian =vet;
+                break;
+            }
         }
-     return null;
+     return veterinarian;
     }
     public Veterinarian update(Veterinarian veterinarian)
     {
-      return null;
-    }
-    public Veterinarian delete(Integer vetId)
-    {
+        Veterinarian oldVeterinarian = read(veterinarian.getVetId());
+        if (oldVeterinarian!=null)
+        {
+            veterinarianDb.remove(oldVeterinarian);
+            veterinarianDb.add(veterinarian);
+        }
 
+      return veterinarian;
     }
+    public void delete(Integer Id)
+    {
+        Veterinarian veterinarian = read(Id);
+        if (vetId!=null)
+        {
+
+            veterinarianDb.remove(veterinarian);
+        }
+
+        return veterinarian;
+    }
+
+    public Set<Veterinarian> getAll() {
+        return dogDB;
+    }
+
+
 
 
 

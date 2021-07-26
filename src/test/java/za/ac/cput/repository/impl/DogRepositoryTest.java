@@ -1,6 +1,12 @@
 package za.ac.cput.repository.impl;
 
-import org.junit.jupiter.api.BeforeEach;
+/*
+    DogRepositoryTest.java
+    Test class for the Repository implementation for the Dog entity.
+    Author: Jason Jaftha (217009301)
+    Date: 22 July 2021
+ */
+
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;

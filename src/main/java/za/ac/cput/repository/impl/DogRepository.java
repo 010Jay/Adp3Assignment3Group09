@@ -73,14 +73,17 @@ public class DogRepository implements IDogRepository {
     }
 
     @Override
-    public void delete(Integer id) {
+    public boolean delete(Integer id) {
 
         Dog dog = read(id);
 
         if(dog != null)
         {
             dogDB.remove(dog);
+            return true;
         }
+
+        return false;
     }
 
     @Override

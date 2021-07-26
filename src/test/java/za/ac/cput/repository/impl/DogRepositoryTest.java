@@ -7,7 +7,6 @@ package za.ac.cput.repository.impl;
     Date: 22 July 2021
  */
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;

@@ -1,10 +1,10 @@
 package za.ac.cput.repository.impl;
 
 /*
-    IDogRepository.java
+    DogDescriptionRepository.java
     Repository Interface for the Dog entity
-    Author: Jason Jaftha (217009301)
-    Date: 22 July 2021
+    Author: Sinoxolo Jaca
+
  */
 
 import za.ac.cput.entity.Dog;

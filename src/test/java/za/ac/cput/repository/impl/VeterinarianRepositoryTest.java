@@ -28,11 +28,13 @@ class VeterinarianRepositoryTest {
         assertNotSame(vet2, vet1);
     }
 
+    @Test
     void testUpdate() {
         System.out.println(vet2.toString());
         assertNotEquals(vet1, vet2);
     }
 
+    @Test
     void testDelete() {
         System.out.println(vet2.toString());
     }

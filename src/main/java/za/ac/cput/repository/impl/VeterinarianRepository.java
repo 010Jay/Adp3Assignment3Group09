@@ -18,10 +18,10 @@ public class VeterinarianRepository {
   public Veterinarian create(Veterinarian vet)
   {
 
-      this.veterinarianDb.add(veterinarian);
-      return veterinarian;
+      this.veterinarianDb.add(vet);
+      return vet;
   }
-    public Veterinarian read(int Id)
+    public Veterinarian read(Integer Id)
     {
         Veterinarian veterinarian = null;
         for ( Veterinarian vet : veterinarianDb)
@@ -48,17 +48,15 @@ public class VeterinarianRepository {
     public void delete(Integer Id)
     {
         Veterinarian veterinarian = read(Id);
-        if (vetId!=null)
+        if (veterinarian!=null)
         {
 
             veterinarianDb.remove(veterinarian);
         }
-
-        return veterinarian;
     }
 
     public Set<Veterinarian> getAll() {
-        return dogDB;
+        return this.veterinarianDb;
     }
 
 

@@ -17,38 +17,41 @@ public class CustomerService implements ICustomerService
     private CustomerRepository repository;
 
     //Constractor
-    public CustomerService(CustomerRepository repository)
+    public CustomerService()
     {
-        this.repository = repository;
-    }
-
-    public CustomerService() {
-
+        this.repository = new CustomerRepository();
     }
 
     //Getter
     public static CustomerService getService()
     {
         if (service == null)
+        {
             service = new CustomerService();
+        }
+
         return service;
     }
 
+    @Override
     public Customer create(Customer customer)
     {
         return this.repository.create(customer);
     }
 
+    @Override
     public Customer read(Integer c)
     {
         return this.repository.read(c);
     }
 
+    @Override
     public Customer update(Customer customer)
     {
         return this.repository.update(customer);
     }
 
+    @Override
     public boolean delete(Integer c)
     {
        return this.repository.delete(c);

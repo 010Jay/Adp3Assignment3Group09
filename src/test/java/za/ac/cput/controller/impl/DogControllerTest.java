@@ -1,5 +1,12 @@
 package za.ac.cput.controller.impl;
 
+/*
+    DogControllerTest.java
+    Test for the Dog controller
+    Author: Jason Jaftha (217009301)
+    Date: 16 August 2021
+ */
+
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;

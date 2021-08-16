@@ -15,8 +15,6 @@ import za.ac.cput.factory.CustomerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@TestMethodOrder(MethodOrderer.MethodName.class)
-
 class CustomerServiceTest
 {
     private  static CustomerService service = new CustomerService();

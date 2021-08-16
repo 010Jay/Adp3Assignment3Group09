@@ -6,20 +6,24 @@ Date:27 July 2021
 
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Customer;
 import za.ac.cput.repository.impl.CustomerRepository;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
-
+@Service
 public class CustomerService implements ICustomerService
 {
     private static CustomerService service= null;
-    private CustomerRepository repository;
+    private CustomerRepository repository = null;
 
     //Constractor
-    public CustomerService()
+    CustomerService()
     {
-        this.repository = new CustomerRepository();
+        this.repository = new CustomerRepository().getRepository();
     }
 
     //Getter
@@ -60,6 +64,22 @@ public class CustomerService implements ICustomerService
 
     @Override
     public Set<Customer> getAll() {
-        return null;
+        return this.repository.getAll();
+    }
+
+    public Set<Customer> getAllCustomersStartWith()
+    {
+        Set<Customer> customerWithJ = new HashSet<Customer>();
+        Set<Customer> customers = getAll();
+        for(Customer customer: customers)
+        {
+            if(customer.getDescription().trim().toLowerCase().startsWith("j"))
+            {
+                customerWithJ.add(customer);
+            }
+        }
+        return customerWithJ;
     }
 }
+
+

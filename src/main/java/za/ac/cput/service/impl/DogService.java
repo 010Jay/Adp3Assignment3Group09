@@ -7,11 +7,12 @@ package za.ac.cput.service.impl;
     Date: 26 July 2021
  */
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Dog;
 import za.ac.cput.repository.impl.DogRepository;
-
 import java.util.Set;
 
+@Service //Indicating to spring boot that this class is a service
 public class DogService implements IDogService {
 
     //Attributes

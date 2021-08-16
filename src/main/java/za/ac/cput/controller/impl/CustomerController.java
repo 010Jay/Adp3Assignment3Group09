@@ -4,12 +4,13 @@ Author:Andy William Hine (219259038)
 Date:02 August 2021
  */
 
-package za.ac.cput.controller;
+package za.ac.cput.controller.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.Customer;
+import za.ac.cput.entity.Dog;
 import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.service.impl.CustomerService;
 
@@ -19,7 +20,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/customer")
 
-public class CustomerHomeController {
+public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
@@ -27,9 +28,10 @@ public class CustomerHomeController {
     //@PostMapping("/create") //easier way of doing this above
 
     public Customer create(@RequestBody Customer customer) {
-        Customer newCustomer = CustomerFactory.createCustomer(customer.getDescription());
-        return customerService.create(newCustomer);
+
+        return customerService.create(customer);
     }
+
 
     @GetMapping("/read/{id}")
     public Customer read(@RequestBody Customer customer)

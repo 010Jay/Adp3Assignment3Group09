@@ -1,4 +1,4 @@
-package za.ac.cput.controller;
+package za.ac.cput.controller.impl;
 
 import org.junit.jupiter.api.MethodDescriptor;
 import org.junit.jupiter.api.MethodOrderer;
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
-class CustomerHomeControllerTest
+class CustomerControllerTest
 {
     private static Customer customer = CustomerFactory.createCustomer(895954834, "Chester", "Edwards", "CEddie@gmail.com", "28 Onyx street", 846363485);
     @Autowired

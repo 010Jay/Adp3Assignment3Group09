@@ -4,11 +4,12 @@ package za.ac.cput.repository.impl;
 import za.ac.cput.entity.Dog;
 import za.ac.cput.entity.Veterinarian;
 import za.ac.cput.factory.VeterinarianFactory;
+import za.ac.cput.repository.IRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class VeterinarianRepository {
+public class VeterinarianRepository implements IRepository<Veterinarian, String> {
   private Set<Veterinarian> veterinarianDb;
 
   public VeterinarianRepository()
@@ -21,6 +22,12 @@ public class VeterinarianRepository {
       this.veterinarianDb.add(vet);
       return vet;
   }
+
+    @Override
+    public Veterinarian read(String s) {
+        return null;
+    }
+
     public Veterinarian read(Integer Id)
     {
         Veterinarian veterinarian = null;
@@ -45,6 +52,12 @@ public class VeterinarianRepository {
 
       return veterinarian;
     }
+
+    @Override
+    public boolean delete(String s) {
+        return false;
+    }
+
     public void delete(Integer Id)
     {
         Veterinarian veterinarian = read(Id);

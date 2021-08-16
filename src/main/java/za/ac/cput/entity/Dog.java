@@ -15,6 +15,9 @@ public class Dog {
         private boolean isPuppy;
         private char gender;
 
+    //Default Constructor | for create (POST) method to work properly
+        private Dog(){}
+
     //Constructor
         private Dog(Builder builder)
         {
@@ -117,9 +120,42 @@ public class Dog {
                 }
         }
 
-    public int getDogId() {
+    //Getters | for Rest service as well
+        public int getDogId() {
         return dogId;
     }
+
+        public int getAge() {
+            return age;
+        }
+
+        public int getVetId() {
+            return vetId;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getColor() {
+            return color;
+        }
+
+        public String getBreed() {
+            return breed;
+        }
+
+        public String getVaccinationStatus() {
+            return vaccinationStatus;
+        }
+
+        public boolean isPuppy() {
+            return isPuppy;
+        }
+
+        public char getGender() {
+            return gender;
+        }
 
     //toString method
         @Override

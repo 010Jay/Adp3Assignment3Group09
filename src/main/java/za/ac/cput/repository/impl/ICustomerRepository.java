@@ -12,6 +12,7 @@ import za.ac.cput.repository.IRepository;
 
 import java.util.Set;
 
+
 public interface ICustomerRepository extends IRepository<Customer,Integer>
 {
   public Set<Customer>getAll();

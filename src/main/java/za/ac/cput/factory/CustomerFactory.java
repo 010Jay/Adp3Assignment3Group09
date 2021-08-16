@@ -27,4 +27,8 @@ public class CustomerFactory
         return customer;
     }
 
+    public static Customer createCustomer(String description) {
+        return createCustomer(33576543,"ants","butcha","Ants@gmail.com",
+                            "3 Vato street",32454565);
+    }
 }

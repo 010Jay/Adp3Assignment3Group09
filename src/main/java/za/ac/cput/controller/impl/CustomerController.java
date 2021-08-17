@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.Customer;
-import za.ac.cput.entity.Dog;
-import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.service.impl.CustomerService;
 
 import java.util.Set;
@@ -34,16 +32,18 @@ public class CustomerController {
 
 
     @GetMapping("/read/{id}")
-    public Customer read(@RequestBody Customer customer)
+    public Customer read(@PathVariable Integer id)
     {
-        return customerService.read(customer.getCustomerID());
+        return customerService.read(id);
     }
+
 
     @PostMapping("/update")
     public Customer update(@RequestBody Customer customer)
     {
         return customerService.update(customer);
     }
+
 
     @DeleteMapping ("/delete")
     public String delete(@RequestBody Customer customer) {

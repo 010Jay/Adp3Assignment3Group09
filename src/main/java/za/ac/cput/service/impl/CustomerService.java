@@ -67,19 +67,19 @@ public class CustomerService implements ICustomerService
         return this.repository.getAll();
     }
 
-    public Set<Customer> getAllCustomersStartWith()
-    {
-        Set<Customer> customerWithJ = new HashSet<Customer>();
-        Set<Customer> customers = getAll();
-        for(Customer customer: customers)
-        {
-            if(customer.getDescription().trim().toLowerCase().startsWith("j"))
-            {
-                customerWithJ.add(customer);
-            }
-        }
-        return customerWithJ;
-    }
+//    public Set<Customer> getAllCustomersStartWith()
+//    {
+//        Set<Customer> customerWithJ = new HashSet<Customer>();
+//        Set<Customer> customers = getAll();
+//        for(Customer customer: customers)
+//        {
+//            if(customer.getDescription().trim().toLowerCase().startsWith("j"))
+//            {
+//                customerWithJ.add(customer);
+//            }
+//        }
+//        return customerWithJ;
+//    }
 }
 
 

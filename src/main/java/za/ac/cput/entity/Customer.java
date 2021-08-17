@@ -8,10 +8,6 @@ package za.ac.cput.entity;
 
 public class Customer
 {
-    public int getCustomerID() {
-        return customerID;
-    }
-
         private int customerID;
         private String name,surname,emailAddress,homeAddress;
         private long phoneNumber;
@@ -26,11 +22,6 @@ public class Customer
             this.homeAddress = builder.homeAddress;
             this.phoneNumber = builder.phoneNumber;
         }
-
-
-    public String getDescription() {
-        return getDescription();
-    }
 
     public int multiply(int cusNum1, int cusNum2) {
         return cusNum1*cusNum2;
@@ -72,6 +63,7 @@ public class Customer
             this.phoneNumber = phoneNumber;
             return this;
         }
+
         public Customer build()
         {
             return new Customer(this);
@@ -89,6 +81,9 @@ public class Customer
             return this;
         }
     }
+
+    public int getCustomerID() {return customerID;}
+
 
     @Override
         public String toString() {

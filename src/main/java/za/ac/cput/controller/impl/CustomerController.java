@@ -60,10 +60,10 @@ public class CustomerController {
         return customerService.getAll();
     }
 
-    @GetMapping("/getallwithj")
-    public Set<Customer> getallwithj()
-    {
-        return customerService.getAllCustomersStartWith();
-    }
+//    @GetMapping("/getallwithj")
+//    public Set<Customer> getallwithj()
+//    {
+//        return customerService.getAllCustomersStartWith();
+//    }
 }
 

@@ -7,21 +7,26 @@ package za.ac.cput.service.impl;
     Date: 26 July 2021
  */
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.entity.Dog;
 import za.ac.cput.factory.DogFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@SpringBootTest
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class DogServiceTest {
     //Attributes
-        private  static DogService service = new DogService();
+        @Autowired
+        private DogService service = DogService.getService();
         private static Dog dog = new DogFactory().createDog("Bimbis", 3, "Golden Brown", false, 'M', "Golden Retriever", 1001, "Vaccinated");
-        private Dog dog2 = new Dog.Builder().copy(dog).setName("Mika").setAge(1).setGender('F').setVetId(1006).build();
+        private static Dog dog2 = new Dog.Builder().copy(dog).setName("Mika").setAge(1).setGender('F').setVetId(1006).build();
 
     @Test
     void a_create() {
@@ -48,6 +53,7 @@ class DogServiceTest {
         System.out.println("Updated: " + updateDog.toString());
     }
 
+    @Disabled
     @Test
     void e_delete() {
 

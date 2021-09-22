@@ -7,16 +7,22 @@ package za.ac.cput.entity;
     Date: 03 June 2021
  */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Dog {
 
     //Attributes
-        private int dogId, age, vetId;
+        @Id
+        private int dogId;
+        private int age, vetId;
         private String name, color, breed, vaccinationStatus;
         private boolean isPuppy;
         private char gender;
 
     //Default Constructor | for create (POST) method to work properly
-        private Dog(){}
+        protected Dog(){}
 
     //Constructor
         private Dog(Builder builder)

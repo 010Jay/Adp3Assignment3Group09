@@ -7,23 +7,21 @@ package za.ac.cput.service.impl;
     Date: 26 July 2021
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Dog;
-import za.ac.cput.repository.impl.DogRepository;
+import za.ac.cput.repository.DogRepository;
+
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service //Indicating to spring boot that this class is a service
 public class DogService implements IDogService {
 
     //Attributes
-        private static DogService service = null;
+        @Autowired
         private DogRepository repository;
-
-    //Constructor
-        public DogService() {
-
-            this.repository = new DogRepository();
-        }
+        private static DogService service = null;
 
     //Singleton
         public static DogService getService() {
@@ -38,31 +36,43 @@ public class DogService implements IDogService {
 
     @Override
     public Dog create(Dog dog) {
-        return this.repository.create(dog);
+        return this.repository.save(dog);
     }
 
     @Override
-    public Dog read(Integer integer) {
-        return this.repository.read(integer);
+    public Dog read(Integer id) {
+        return this.repository.findById(id).orElse(null);
     }
 
     @Override
     public Dog update(Dog dog) {
-        return this.repository.update(dog);
+        if(this.repository.existsById(dog.getDogId()))
+        {
+            return this.repository.save(dog);
+        }
+
+        return null;
     }
 
     @Override
-    public boolean delete(Integer integer) {
-        return this.repository.delete(integer);
+    public boolean delete(Integer id) {
+        this.repository.deleteById(id);
+
+        if(this.repository.existsById(id))
+        {
+            return false;
+        }
+
+        return true;
     }
 
     @Override
     public Set<Dog> getAll() {
-        return this.repository.getAll();
+        return repository.findAll().stream().collect(Collectors.toSet());
     }
 
     @Override
     public Integer getSize() {
-        return this.repository.getSize();
+        return repository.findAll().stream().collect(Collectors.toSet()).size();
     }
 }

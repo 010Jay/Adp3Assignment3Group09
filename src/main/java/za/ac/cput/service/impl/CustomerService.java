@@ -9,12 +9,8 @@ package za.ac.cput.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Customer;
-import za.ac.cput.repository.impl.CustomerRepository;
-import za.ac.cput.repository.impl.CustomerRepository1;
+import za.ac.cput.repository.CustomerRepository;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -24,7 +20,16 @@ public class CustomerService implements ICustomerService
     private static CustomerService service= null;
 
     @Autowired
-    private CustomerRepository1 repository = null;
+    private CustomerRepository repository;
+
+    public static CustomerService getService()
+    {
+        if (service == null)
+        {
+            service = new CustomerService();
+        }
+        return service;
+    }
 
     @Override
     public Customer create(Customer customer)
@@ -35,7 +40,7 @@ public class CustomerService implements ICustomerService
     @Override
     public Customer read(Integer customerID)
     {
-        return (Customer) this.repository.findById(customerID).orElse(null);
+        return this.repository.findById(customerID).orElse(null);
     }
 
     @Override

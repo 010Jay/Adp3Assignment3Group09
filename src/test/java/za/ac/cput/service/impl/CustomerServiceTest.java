@@ -53,7 +53,7 @@ class CustomerServiceTest
     {
         boolean delete = service.delete(customer1.getCustomerID());
         assertTrue(delete);
-        System.out.println("Delete:" + delete);
+        System.out.println("Delete:" + true);
     }
 
     @Test

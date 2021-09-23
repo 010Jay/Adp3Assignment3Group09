@@ -6,13 +6,18 @@ Date:04 June 2021
 
 package za.ac.cput.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer
 {
+    @Id
         private int customerID;
         private String name,surname,emailAddress,homeAddress;
         private long phoneNumber;
 
-    public Customer() {}
+    protected Customer() {}
     public Customer(Builder builder)
         {
             this.customerID = builder.customerID;

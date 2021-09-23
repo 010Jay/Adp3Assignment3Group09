@@ -12,7 +12,7 @@ import za.ac.cput.repository.IRepository;
 
 import java.util.Set;
 
-
+@Deprecated
 public interface ICustomerRepository extends IRepository<Customer,Integer>
 {
   public Set<Customer>getAll();

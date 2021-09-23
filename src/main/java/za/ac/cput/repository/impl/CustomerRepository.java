@@ -10,7 +10,7 @@ import za.ac.cput.entity.Customer;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Deprecated
 public class CustomerRepository implements ICustomerRepository
 {
     private static CustomerRepository Repository = null;

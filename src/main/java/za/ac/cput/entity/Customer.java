@@ -6,8 +6,14 @@ Date:04 June 2021
 
 package za.ac.cput.entity;
 
-public class Customer
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Customer implements Serializable
 {
+    @Id
         private int customerID;
         private String name,surname,emailAddress,homeAddress;
         private long phoneNumber;
@@ -82,7 +88,7 @@ public class Customer
         }
     }
 
-    public int getCustomerID() {return customerID;}
+    public Integer getCustomerID() {return customerID;}
 
 
     @Override

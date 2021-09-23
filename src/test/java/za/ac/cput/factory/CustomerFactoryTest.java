@@ -24,8 +24,10 @@ class CustomerFactoryTest
     void setUp()
     {
         //These are the objects that will be tested
-        c1 = new Customer();
-        c2 = new Customer();
+        c1 = CustomerFactory.createCustomer(78543,"Cheslin","Voigt",
+                "Voight82@gmail.com","9 Onyx street",746838701);
+        c2 = CustomerFactory.createCustomer(748057,"Lynn","Pedro",
+                "pedro1@gmail.com","3 Amathyst street",984576467);
         c3 = c1;
     }
 

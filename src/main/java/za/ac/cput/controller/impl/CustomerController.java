@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.entity.Customer;
-import za.ac.cput.service.impl.CustomerService;
 
 import java.util.Set;
 

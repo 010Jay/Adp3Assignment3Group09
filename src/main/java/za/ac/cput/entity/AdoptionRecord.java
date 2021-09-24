@@ -1,5 +1,7 @@
 package za.ac.cput.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 /*
@@ -9,14 +11,18 @@ import java.util.Date;
     Date: 04 June 2021
  */
 
+@Entity
 public class AdoptionRecord {// start of AdoptionRecord class
 
     //Attributes
+    @Id
     private int adoptionId;
     private int dogId;
     private int customerId;
     private int staffId;
     private Date date;
+
+    protected AdoptionRecord(){}
 
     //Constructor
     public AdoptionRecord(Builder builder)
@@ -27,9 +33,7 @@ public class AdoptionRecord {// start of AdoptionRecord class
         this.dogId = builder.dogId;
         this.staffId = builder.staffId;
     }
-    public AdoptionRecord() {
 
-    }
 
     //toString method
     @Override
@@ -41,6 +45,10 @@ public class AdoptionRecord {// start of AdoptionRecord class
                 ", staffId=" + staffId +
                 ", date=" + date +
                 '}';
+    }
+
+    public int getAdoptionId() {
+        return adoptionId;
     }
 
     //Builder class
@@ -78,6 +86,29 @@ public class AdoptionRecord {// start of AdoptionRecord class
             this.date = date;
             return this;
         }
+
+        /*
+        //Getters
+        public int getAdoptionId() {
+            return adoptionId;
+        }
+
+        public int getCustomerId() {
+            return customerId;
+        }
+
+        public Date getDate() {
+            return date;
+        }
+
+        public int getDogId() {
+            return dogId;
+        }
+
+        public int getStaffId() {
+            return staffId;
+        }
+        */
 
         //Returning AdoptionRecord instance with builder's attributes
         public AdoptionRecord build() {

@@ -5,7 +5,7 @@ import za.ac.cput.entity.Veterinarian;
 
 /*
     VeterinarianFactory.java
-    Factory for the Veterinarian
+    Factory for the Veterinarian entity
     Author: Nonhlahla Hlungwani (218160658)
     Date: 05 June 2021
  */

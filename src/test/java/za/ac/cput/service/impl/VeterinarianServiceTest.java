@@ -1,7 +1,6 @@
 package za.ac.cput.service.impl;
 /*
-    Veterinarian.java
-    Veterinarian Entity with builder Pattern
+    VeterinarianServiceTest.java
     Author: Nonhlahla Hlungwani (218160658)
     Date: 02 August 2021
  */

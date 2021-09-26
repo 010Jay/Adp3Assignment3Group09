@@ -1,7 +1,6 @@
 package za.ac.cput.service.impl;
 /*
-    Veterinarian.java
-    Veterinarian Entity with builder Pattern
+    IVeterinarianService.java
     Author: Nonhlahla Hlungwani (218160658)
     Date: 02 August 2021
  */
@@ -14,7 +13,7 @@ public interface IVeterinarianService extends IService<Veterinarian, Integer> {
 
     Set<Veterinarian> getAll();
 
-    Veterinarian read(String s);
+    Veterinarian read(Integer vetId);
 
-    boolean delete(String s);
+    boolean delete(Integer vetId);
 }

@@ -1,16 +1,20 @@
 package za.ac.cput.service.impl;
 /*
-    Veterinarian.java
-    Veterinarian Entity with builder Pattern
+    VeterinarianService.java
     Author: Nonhlahla Hlungwani (218160658)
     Date: 02 August 2021
  */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.Veterinarian;
-import za.ac.cput.repository.impl.VeterinarianRepository;
+import za.ac.cput.repository.VeterinarianRepository;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
+@Service
 public class VeterinarianService implements IVeterinarianService {
+    @Autowired
     private static VeterinarianService service=null;
     private VeterinarianRepository repository;
 
@@ -31,38 +35,37 @@ public class VeterinarianService implements IVeterinarianService {
     @Override
     public Veterinarian create(Veterinarian veterinarian)
     {
-        return this.repository.create(veterinarian);
+        return this.repository.save(veterinarian);
     }
 
     @Override
-    public Veterinarian read(Integer integer) {
-        return null;
-    }
-
-    @Override
-    public Veterinarian read(String s)
+    public Veterinarian read(Integer vetId)
     {
-        return this.repository.read(s);
+        return this.repository.findById(vetId).orElse(null);
     }
     @Override
     public Veterinarian update(Veterinarian veterinarian)
     {
-        return this.repository.update(veterinarian);
+        if(this.repository.existsById(veterinarian.getVetId()))
+            return this.repository.save(veterinarian);
+            return null;
+
     }
 
     @Override
-    public boolean delete(Integer integer) {
-        return false;
+    public boolean delete(Integer vetId) {
+        this.repository.deleteById(vetId);
+        if(this.repository.existsById(vetId)) {
+
+            return false;
+        }
+        else
+            return true;
     }
 
-    @Override
-    public boolean delete(String s)
-    {
-        return this.repository.delete(s);
-    }
     @Override
     public Set<Veterinarian> getAll()
     {
-        return this.repository.getAll();
+        return repository.findAll().stream().collect(Collectors.toSet());
     }
 }

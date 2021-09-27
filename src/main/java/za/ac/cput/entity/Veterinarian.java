@@ -36,10 +36,9 @@ public class Veterinarian {
                 '}';
     }
 
-    public int getVetId() {
 
-        return getVetId();
-    }
+
+
 
 
     public static class Builder{
@@ -92,5 +91,9 @@ public class Veterinarian {
             return this;
         }
     }
+    public int getVetId() {
+        return vetId;
+    }
+
 }
 

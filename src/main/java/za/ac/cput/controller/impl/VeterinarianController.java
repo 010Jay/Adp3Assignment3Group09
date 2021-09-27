@@ -25,9 +25,9 @@ public class VeterinarianController {
     }
 
     @GetMapping("/read")
-    public Veterinarian read(@RequestBody Veterinarian veterinarian)
+    public Veterinarian read(@PathVariable Integer id)
     {
-        return veterinarianService.read(veterinarian.getVetId());
+        return veterinarianService.read(id);
     }
 
     @PostMapping("/update")
@@ -37,9 +37,9 @@ public class VeterinarianController {
     }
 
     @PostMapping("/delete")
-    public String delete(@RequestBody Veterinarian veterinarian)
+    public String delete(@PathVariable Integer id)
     {
-        if (veterinarianService.delete(veterinarian.getVetId()))
+        if (veterinarianService.delete(id))
             return "Successfully deleted";
         else
             return "could not delete";

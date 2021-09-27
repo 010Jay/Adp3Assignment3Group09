@@ -26,16 +26,14 @@ class AdoptionRecordFactoryTest {//start of AdoptionRecordFactoryTest class
     @BeforeEach
     void setUp()
     {
-        aRecord1 = new AdoptionRecord();
-        aRecord2 = new AdoptionRecord();
+        aRecord1 = AdoptionRecordFactory.createAdoptionRecord(1001, 123456, 987654, date);
+        aRecord2 = AdoptionRecordFactory.createAdoptionRecord(1002, 258085, 794613, date);
         aRecord3 = aRecord2;
     }
 
     @Test
-    public void createAdoptionRecord(){
+    public void testCreateAdoptionRecord(){
 
-        aRecord1 = AdoptionRecordFactory.createAdoptionRecord(1001, 123456, 987654, date);
-        aRecord2 = AdoptionRecordFactory.createAdoptionRecord(1002, 258085, 794613, date);
         System.out.println(aRecord1);
         System.out.println(aRecord2);
 }

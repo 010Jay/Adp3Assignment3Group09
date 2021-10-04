@@ -24,7 +24,7 @@ public class VeterinarianController {
         return veterinarianService.create(veterinarian);
     }
 
-    @GetMapping("/read")
+    @GetMapping("/read/{id}")
     public Veterinarian read(@PathVariable Integer id)
     {
         return veterinarianService.read(id);
@@ -36,7 +36,7 @@ public class VeterinarianController {
         return veterinarianService.update(veterinarian);
     }
 
-    @PostMapping("/delete")
+    @PostMapping("/delete/{id}")
     public String delete(@PathVariable Integer id)
     {
         if (veterinarianService.delete(id))

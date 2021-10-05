@@ -39,29 +39,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic()
 
+        .and()
+        .authorizeRequests()
+
         //Dog endpoints
-            .and()
-            .authorizeRequests()
             .antMatchers(HttpMethod.POST, "**/create").hasRole("ADMIN")
             .antMatchers(HttpMethod.GET, "**/read").hasRole("ADMIN")
             .antMatchers(HttpMethod.POST, "**/update").hasRole("ADMIN")
             .antMatchers(HttpMethod.DELETE, "**/delete").hasRole("ADMIN")
             .antMatchers(HttpMethod.GET, "**/getAll").hasRole("ADMIN")
-
         //DogDescription endpoints
-
 
         //Customer endpoints
 
-
         //AdoptionRecord endpoints
-
 
         //Staff endpoints
 
-
         //Veterinarian endpoints
-
 
         //Disable
             .and()

@@ -1,11 +1,11 @@
 package za.ac.cput.entity;
 
-/*
-    DogTest.java
-    Test Case for the Dog
-    Author: Jason Jaftha (217009301)
-    Date: 03 June 2021
- */
+/**
+ * DogTest.java
+ * Test Case for the Dog
+ * Author: Jason Jaftha (217009301)
+ * Date: 03 June 2021
+ **/
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

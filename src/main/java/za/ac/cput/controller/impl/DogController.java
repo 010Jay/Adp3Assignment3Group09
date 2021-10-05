@@ -1,11 +1,11 @@
 package za.ac.cput.controller.impl;
 
-/*
-    DogController.java
-    Controller for the Dog service
-    Author: Jason Jaftha (217009301)
-    Date: 12 August 2021
- */
+/**
+ * DogController.java
+ * Controller for the Dog service
+ * Author: Jason Jaftha (217009301)
+ * Date: 12 August 2021
+ **/
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

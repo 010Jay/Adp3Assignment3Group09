@@ -1,11 +1,11 @@
 package za.ac.cput.factory;
 
-/*
-    DogFactory.java
-    DogFactory class for the Dog entity
-    Author: Jason Jaftha (217009301)
-    Date: 05 June 2021
- */
+/**
+ * DogFactory.java
+ * DogFactory class for the Dog entity
+ * Author: Jason Jaftha (217009301)
+ * Date: 05 June 2021
+ **/
 
 import za.ac.cput.entity.Dog;
 

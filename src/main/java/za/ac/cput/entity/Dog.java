@@ -1,11 +1,11 @@
 package za.ac.cput.entity;
 
-/*
-    Dog.java
-    Entity for the Dog
-    Author: Jason Jaftha (217009301)
-    Date: 03 June 2021
- */
+/**
+ * Dog.java
+ * Entity for the Dog
+ * Author: Jason Jaftha (217009301)
+ * Date: 03 June 2021
+ **/
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

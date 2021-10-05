@@ -1,11 +1,11 @@
 package za.ac.cput.service.impl;
 
-/*
-    DogRepositoryTest.java
-    Test class for the Service implementation for the Dog entity.
-    Author: Jason Jaftha (217009301)
-    Date: 26 July 2021
- */
+/**
+ * DogRepositoryTest.java
+ * Test class for the Service implementation for the Dog entity.
+ * Author: Jason Jaftha (217009301)
+ * Date: 26 July 2021
+ **/
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;

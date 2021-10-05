@@ -1,11 +1,11 @@
 package za.ac.cput.service.impl;
 
-/*
-    IDogService.java
-    Dog Service implementation for the Dog entity
-    Author: Jason Jaftha (217009301)
-    Date: 26 July 2021
- */
+/**
+ * IDogService.java
+ * Dog Service implementation for the Dog entity
+ * Author: Jason Jaftha (217009301)
+ * Date: 26 July 2021
+ **/
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

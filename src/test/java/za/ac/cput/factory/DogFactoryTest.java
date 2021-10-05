@@ -1,11 +1,11 @@
 package za.ac.cput.factory;
 
-/*
-    DogFactoryTest.java
-    Test class for the DogFactory class
-    Author: Jason Jaftha (217009301)
-    Date: 05 June 2021
- */
+/**
+ * DogFactoryTest.java
+ * Test class for the DogFactory class
+ * Author: Jason Jaftha (217009301)
+ * Date: 05 June 2021
+ **/
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;

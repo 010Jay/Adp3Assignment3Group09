@@ -1,7 +1,7 @@
 package za.ac.cput.service.impl;
 
 /**
- * DogRepositoryTest.java
+ * DogServiceTest.java
  * Test class for the Service implementation for the Dog entity.
  * Author: Jason Jaftha (217009301)
  * Date: 26 July 2021

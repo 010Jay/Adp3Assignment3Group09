@@ -1,5 +1,12 @@
 package za.ac.cput.entity;
 
+/**
+ * StaffTest.java
+ * Test class for the Staff entity
+ * Author: Nomgcobo Hlwempu (205205208)
+ * Date: ??
+ **/
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

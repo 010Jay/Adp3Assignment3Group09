@@ -1,7 +1,7 @@
 package za.ac.cput.service.impl;
 
 /**
- * IDogService.java
+ * DogService.java
  * Dog Service implementation for the Dog entity
  * Author: Jason Jaftha (217009301)
  * Date: 26 July 2021

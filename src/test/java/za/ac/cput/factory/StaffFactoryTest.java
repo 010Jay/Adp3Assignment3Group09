@@ -1,5 +1,12 @@
 package za.ac.cput.factory;
 
+/**
+ * StaffFactoryTest.java
+ * Test class for the Staff factory
+ * Author: Nomgcobo Hlwempu (205205208)
+ * Date: ??
+ **/
+
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.Staff;
 

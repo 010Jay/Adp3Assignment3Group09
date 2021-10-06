@@ -68,7 +68,7 @@ public class Staff {
             return new Staff(this);
         }
 
-        private Builder copy(Staff staff)
+        public Builder copy(Staff staff)
         {
             this.staffId = staff.staffId;
             this.name = staff.name;
@@ -86,5 +86,14 @@ public class Staff {
     {
         System.out.println("Application has been approved!!!");
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "staffId=" + staffId +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }

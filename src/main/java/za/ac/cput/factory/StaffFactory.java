@@ -1,5 +1,12 @@
 package za.ac.cput.factory;
 
+/**
+ * StaffFactory.java
+ * Factory for the Staff entity
+ * Author: Nomgcobo Hlwempu (205205208)
+ * Date: ??
+ **/
+
 import za.ac.cput.entity.Staff;
 
 public class StaffFactory {

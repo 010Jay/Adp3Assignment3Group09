@@ -1,17 +1,43 @@
 package za.ac.cput.entity;
 
+/**
+ * Staff.java
+ * Entity for the Staff
+ * Author: Nomgcobo Hlwempu (205205208)
+ * Date: ??
+ **/
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Staff {
 
     //Attributes
-    private String name;
+    @Id
     private int staffId;
+    private String name;
     private String surname;
+
+    protected Staff() {}
 
     //Constructor
     private Staff(Builder builder) {
         this.name = builder.name;
         this.staffId = builder.staffId;
         this.surname = builder.surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 
     //Builder class

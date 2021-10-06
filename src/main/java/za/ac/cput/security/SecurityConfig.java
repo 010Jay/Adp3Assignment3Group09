@@ -43,18 +43,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
 
         //Dog endpoints
-            .antMatchers(HttpMethod.POST, "**/create").hasRole("ADMIN")
-            .antMatchers(HttpMethod.GET, "**/read").hasRole("ADMIN")
-            .antMatchers(HttpMethod.POST, "**/update").hasRole("ADMIN")
-            .antMatchers(HttpMethod.DELETE, "**/delete").hasRole("ADMIN")
-            .antMatchers(HttpMethod.GET, "**/getAll").hasRole("ADMIN")
-        //DogDescription endpoints
-
+            .antMatchers(HttpMethod.POST, "dog/create").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "dog/read").hasRole("ADMIN")
+            .antMatchers(HttpMethod.POST, "dog/update").hasRole("ADMIN")
+            .antMatchers(HttpMethod.DELETE, "dog/delete").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "dog/getAll").hasRole("ADMIN")
+        //Staff endpoints
+            .antMatchers(HttpMethod.POST, "staff/create").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "staff/read").hasRole("ADMIN")
+            .antMatchers(HttpMethod.POST, "staff/update").hasRole("ADMIN")
+            .antMatchers(HttpMethod.DELETE, "staff/delete").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "staff/getAll").hasRole("ADMIN")
         //Customer endpoints
 
         //AdoptionRecord endpoints
 
-        //Staff endpoints
+        //DogDescription endpoints
 
         //Veterinarian endpoints
 

@@ -14,28 +14,32 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
 class CustomerControllerTest
 {
-    private static Customer customer = CustomerFactory.createCustomer(895954834, "Chester", "Edwards", "CEddie@gmail.com", "28 Onyx street", 846363485);
-    private Customer customerTest;
     @Autowired
     private TestRestTemplate restTemplate;
     private final String BASE_URL = "http://localhost:8080/customer";
+    private static Customer customer = CustomerFactory.createCustomer(895954834, "Chester", "Edwards", "CEddie@gmail.com", "28 Onyx street", 846363485);
+
+    private Customer customerTest;
+//    public static String SECURITY_USERNAME= "abc";
+//    public static String SECURITY_PASSWORD= "pass";
+
 
 
     @Test
     void a_create()
     {
         String url = BASE_URL+"/create";
+        System.out.println("URL:" +url);
         ResponseEntity<Customer> postResponse = restTemplate.postForEntity(url,customer,Customer.class);
 
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-        // assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
-         assertEquals(customer.getCustomerID(),postResponse.getBody().getCustomerID());
+        assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
+        assertEquals(customer.getCustomerID(),postResponse.getBody().getCustomerID());
 
         customerTest = postResponse.getBody();
         System.out.println("Saved data:" + customerTest.toString());
@@ -83,7 +87,10 @@ class CustomerControllerTest
         String url = BASE_URL + "/getall";
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null,headers);
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET,entity,String.class);
+        ResponseEntity<String> response = restTemplate
+//                .withBasicAuth(SECURITY_USERNAME,SECURITY_PASSWORD)
+                .exchange(url, HttpMethod.GET,entity,String.class);
+
         System.out.println("Show all: ");
         System.out.println(response);
         System.out.println(response.getBody());

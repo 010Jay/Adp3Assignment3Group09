@@ -14,12 +14,12 @@ import java.util.Date;
 
 public class AdoptionRecordFactory {//start of AdoptionRecordFactory class
 
-    private static int id = 0;
+    //private static int recordId = 0;
 
-    public static AdoptionRecord createAdoptionRecord(int dogId, int customerId, int staffId, Date date)
+    public static AdoptionRecord createAdoptionRecord(int recordId,int dogId, int customerId, int staffId, Date date)
     {
         return new AdoptionRecord.Builder()
-                .setAdoptionId(++ id)
+                .setAdoptionId(++ recordId)
                 .setDogId(dogId)
                 .setCustomerId(customerId)
                 .setStaffId(staffId)

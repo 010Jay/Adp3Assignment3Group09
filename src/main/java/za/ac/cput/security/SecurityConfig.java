@@ -55,11 +55,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers(HttpMethod.DELETE, "staff/delete").hasRole("ADMIN")
             .antMatchers(HttpMethod.GET, "staff/getAll").hasRole("ADMIN")
         //Customer endpoints
-                .antMatchers(HttpMethod.POST, "customer/create").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "customer/read").hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "customer/update").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "customer/delete").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "customer/getAll").hasRole("ADMIN")
+            .antMatchers(HttpMethod.POST, "customer/create").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "customer/read").hasRole("ADMIN")
+            .antMatchers(HttpMethod.POST, "customer/update").hasRole("ADMIN")
+            .antMatchers(HttpMethod.DELETE, "customer/delete").hasRole("ADMIN")
+            .antMatchers(HttpMethod.GET, "customer/getAll").hasRole("ADMIN")
         //AdoptionRecord endpoints
 
         //DogDescription endpoints

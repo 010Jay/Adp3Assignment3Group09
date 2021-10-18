@@ -27,11 +27,10 @@ class AdoptionRecordServiceTest {//start of class
 
     //Atttributes
     @Autowired
-    private static final Date date = new Date();
     private AdoptionRecordService service = AdoptionRecordService.getService();
+    private static final Date date = new Date();
     private static AdoptionRecord record1 = new AdoptionRecordFactory().createAdoptionRecord(001, 1001, 123456, 987654, date);
-    private static AdoptionRecord record2 = new AdoptionRecord.Builder().copy(record1).setAdoptionId(90059).setDogId(1009).setCustomerId(744125).setStaffId(45612).setDate(date).build();
-
+    private static AdoptionRecord record2 = new AdoptionRecord.Builder().copy(record1).setDogId(1009).setCustomerId(744125).setStaffId(45612).setDate(date).build();
 
     @Test
     void a_create()
@@ -46,14 +45,14 @@ class AdoptionRecordServiceTest {//start of class
     {
         AdoptionRecord readRecord = service.read(record1.getAdoptionId());
         System.out.println("Reading: " + readRecord);
-        assertNull(readRecord);
+        assertNotNull(readRecord);
     }
 
     @Test
     void c_update()
     {
         AdoptionRecord updateRecord = service.update(record2);
-        assertEquals(4, service.getAll());
+        assertNotEquals(record1, service.getAll());
         System.out.println("Record Update: " + updateRecord);
     }
 

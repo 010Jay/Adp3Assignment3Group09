@@ -51,6 +51,42 @@ public class AdoptionRecord {// start of AdoptionRecord class
         return adoptionId;
     }
 
+    public int getDogId() {
+        return dogId;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setAdoptionId(int adoptionId) {
+        this.adoptionId = adoptionId;
+    }
+
+    public void setDogId(int dogId) {
+        this.dogId = dogId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     //Builder class
     public static class Builder {
 

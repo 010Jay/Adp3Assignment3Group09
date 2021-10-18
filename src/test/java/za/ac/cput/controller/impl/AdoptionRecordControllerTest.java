@@ -16,6 +16,8 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.*;
 import za.ac.cput.entity.AdoptionRecord;
 import za.ac.cput.factory.AdoptionRecordFactory;
+
+import java.util.Calendar;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,7 +66,7 @@ class AdoptionRecordControllerTest
     void c_update() {
         String url = BASE_URL + "/update/";
         System.out.println("URL: " + url);
-        AdoptionRecord updateAdoptionRecord = new AdoptionRecord.Builder().copy(adoptionRecord).setAdoptionId(123).setDogId(987).setCustomerId(789).setStaffId(852).setDate(date).build();
+        AdoptionRecord updateAdoptionRecord = new AdoptionRecord.Builder().copy(adoptionRecord).setDogId(987).setCustomerId(789).setStaffId(852).setDate(date).build();
         ResponseEntity<AdoptionRecord> postResponse = restTemplate.postForEntity(url, updateAdoptionRecord, AdoptionRecord.class);
 
         assertNotNull(postResponse.getBody());
@@ -75,7 +77,7 @@ class AdoptionRecordControllerTest
 
     @Test
     void e_delete() {
-        String url = BASE_URL + "/delete/" + adoptionRecord.toString();
+        String url = BASE_URL + "/delete/" + adoptionRecord.getAdoptionId();
         System.out.println("URL: " + url);
         restTemplate.delete(url);
     }

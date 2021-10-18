@@ -87,29 +87,6 @@ public class AdoptionRecord {// start of AdoptionRecord class
             return this;
         }
 
-        /*
-        //Getters
-        public int getAdoptionId() {
-            return adoptionId;
-        }
-
-        public int getCustomerId() {
-            return customerId;
-        }
-
-        public Date getDate() {
-            return date;
-        }
-
-        public int getDogId() {
-            return dogId;
-        }
-
-        public int getStaffId() {
-            return staffId;
-        }
-        */
-
         //Returning AdoptionRecord instance with builder's attributes
         public AdoptionRecord build() {
 
@@ -117,7 +94,7 @@ public class AdoptionRecord {// start of AdoptionRecord class
         }
 
         //Copy/Clone method
-        private Builder copy(AdoptionRecord adoptionRecord){
+        public Builder copy(AdoptionRecord adoptionRecord){
 
             this.adoptionId = adoptionRecord.adoptionId;
             this.customerId = adoptionRecord.customerId;

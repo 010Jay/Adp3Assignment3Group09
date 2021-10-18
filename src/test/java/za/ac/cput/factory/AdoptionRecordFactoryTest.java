@@ -7,8 +7,8 @@ package za.ac.cput.factory;
  */
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.AdoptionRecord;
 
 import java.util.Date;
@@ -26,8 +26,8 @@ class AdoptionRecordFactoryTest {//start of AdoptionRecordFactoryTest class
     @BeforeEach
     void setUp()
     {
-        aRecord1 = AdoptionRecordFactory.createAdoptionRecord(1001, 123456, 987654, date);
-        aRecord2 = AdoptionRecordFactory.createAdoptionRecord(1002, 258085, 794613, date);
+        aRecord1 = AdoptionRecordFactory.createAdoptionRecord(001, 1001, 123456, 987654, date);
+        aRecord2 = AdoptionRecordFactory.createAdoptionRecord(002,1002, 258085, 794613, date);
         aRecord3 = aRecord2;
     }
 

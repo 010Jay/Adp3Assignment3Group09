@@ -24,10 +24,6 @@ class CustomerControllerTest
     private static Customer customer = CustomerFactory.createCustomer(895954834, "Chester", "Edwards", "CEddie@gmail.com", "28 Onyx street", 846363485);
 
     private Customer customerTest;
-//    public static String SECURITY_USERNAME= "abc";
-//    public static String SECURITY_PASSWORD= "pass";
-
-
 
     @Test
     void a_create()
@@ -45,7 +41,6 @@ class CustomerControllerTest
         System.out.println("Saved data:" + customerTest.toString());
 
     }
-
 
     @Test
     void b_read()

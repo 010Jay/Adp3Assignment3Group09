@@ -30,7 +30,6 @@ public class CustomerController {
         return customerService.create(customer);
     }
 
-
     @GetMapping("/read/{id}")
     public Customer read(@PathVariable Integer id)
     {
@@ -45,9 +44,9 @@ public class CustomerController {
     }
 
 
-    @DeleteMapping ("/delete")
-    public String delete(@RequestBody Customer customer) {
-        if (customerService.delete(customer.getCustomerID()))
+    @DeleteMapping ("/delete/{id}")
+    public String delete(@PathVariable Integer id) {
+        if (customerService.delete(id))
         {
             return "Successfully deleted!";
         }
@@ -60,10 +59,5 @@ public class CustomerController {
         return customerService.getAll();
     }
 
-//    @GetMapping("/getallwithj")
-//    public Set<Customer> getallwithj()
-//    {
-//        return customerService.getAllCustomersStartWith();
-//    }
 }
 

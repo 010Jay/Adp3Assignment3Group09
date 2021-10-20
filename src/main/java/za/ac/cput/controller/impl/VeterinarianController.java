@@ -36,7 +36,7 @@ public class VeterinarianController {
         return veterinarianService.update(veterinarian);
     }
 
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable Integer id)
     {
         if (veterinarianService.delete(id))

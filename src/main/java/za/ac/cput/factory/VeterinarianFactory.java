@@ -20,7 +20,7 @@ public class VeterinarianFactory {
                 .setName(name)
                 .setSurname(surname)
                 .setPhoneNumber(phoneNumber)
-                .setEmailAddress(surname)
+                .setEmailAddress(emailAddress)
                 .build();
 
 

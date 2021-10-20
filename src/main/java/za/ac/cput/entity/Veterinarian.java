@@ -6,12 +6,20 @@ package za.ac.cput.entity;
     Date: 04 June 2021
  */
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Veterinarian {
+
+    @Id
     private int vetId;
     private String name;
     private String surname;
     private long phoneNumber;
     private String emailAddress;
+
+    protected Veterinarian (){}
 
     public Veterinarian(Builder builder) {
         this.vetId = builder.vetId;
@@ -36,19 +44,12 @@ public class Veterinarian {
                 '}';
     }
 
-
-
-
-
-
     public static class Builder{
         private int vetId;
         private String name;
         private String surname;
         private long phoneNumber;
         private String emailAddress;
-
-
 
         public Builder setVetId(int vetId) {
             this.vetId = vetId;
@@ -91,9 +92,45 @@ public class Veterinarian {
             return this;
         }
     }
+
     public int getVetId() {
         return vetId;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setVetId(int vetId) {
+        this.vetId = vetId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 }
 

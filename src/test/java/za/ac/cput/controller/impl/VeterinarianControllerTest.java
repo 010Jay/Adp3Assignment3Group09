@@ -18,19 +18,15 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class VeterinarianControllerTest {
-@Autowired
-    Veterinarian vet,vet2,vetTest,updateVet;
+
+    @Autowired
     private TestRestTemplate restTemplate;
     private final String BASE_URL = "http://localhost:8080/veterinarian";
-
-    @BeforeEach
-    public void setUp() {
-        vet = new VeterinarianFactory().createVeterinarian("Nonhlahla", "Hlungwani", 0720657472, "218160658@mycput.ac.za");
-
-    }
+    private Veterinarian vet2,vetTest,updateVet;
+    private Veterinarian vet = new VeterinarianFactory().createVeterinarian("Nonhlahla", "Hlungwani", 0720657472, "218160658@mycput.ac.za");
 
     @Test
-    void create() {
+    void a_create() {
         String url = BASE_URL + "/create";
         ResponseEntity<Veterinarian> postResponse = restTemplate.postForEntity(url, vet, Veterinarian.class);
         assertNotNull(postResponse);
@@ -42,7 +38,7 @@ class VeterinarianControllerTest {
     }
 
     @Test
-    void read() {
+    void b_read() {
         String url = BASE_URL + "/read/" + vet.getVetId();
         ResponseEntity<Veterinarian> response = restTemplate.getForEntity(url, Veterinarian.class);
         assertEquals(vet.getVetId(), response.getBody().getVetId());
@@ -51,7 +47,7 @@ class VeterinarianControllerTest {
     }
 
     @Test
-    void update() {
+    void c_update() {
         String url = BASE_URL + "/update/";
         vet2 = new Veterinarian.Builder().copy(vet).setName("Mandla").setSurname("Hlungwani").setPhoneNumber(277345632).setEmailAddress("233767890@mycput.ac.za").build();
         ResponseEntity<Veterinarian> postResponse = restTemplate.postForEntity(url, vet2, Veterinarian.class);
@@ -61,13 +57,13 @@ class VeterinarianControllerTest {
     }
 
     @Test
-    void delete() {
+    void e_delete() {
         String url = BASE_URL + "/delete/" + vet.getVetId();
         restTemplate.delete(url);
     }
 
     @Test
-    void getAll() {
+    void d_getAll() {
         String url = BASE_URL + "/getAll" ;
         System.out.println(url);
         HttpHeaders headers = new HttpHeaders();

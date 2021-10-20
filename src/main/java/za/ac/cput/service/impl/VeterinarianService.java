@@ -15,8 +15,8 @@ import java.util.stream.Collectors;
 @Service
 public class VeterinarianService implements IVeterinarianService {
     @Autowired
-    private static VeterinarianService service=null;
     private VeterinarianRepository repository;
+    private static VeterinarianService service=null;
 
     public VeterinarianService(VeterinarianRepository repository) {
         this.repository = repository;

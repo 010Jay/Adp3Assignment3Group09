@@ -24,14 +24,14 @@ public class AdoptionRecordController
     private AdoptionRecordService adoptionRecordService;
 
     //Create adoptionRecord
-    @RequestMapping(value = "/create", method = RequestMethod.POST) //Specify path and http method.
-    public AdoptionRecord create(@RequestBody AdoptionRecord adoptionRecord) //@RequestBody to require parameters
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public AdoptionRecord create(@RequestBody AdoptionRecord adoptionRecord)
     {
         return adoptionRecordService.create(adoptionRecord);
     }
 
     //Read
-    @GetMapping("/read/{id}") //Another (shorter) way of specifying the path and method.
+    @GetMapping("/read/{id}")
     public AdoptionRecord read(@PathVariable Integer id)
     {
         return adoptionRecordService.read(id);

@@ -69,7 +69,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //DogDescription endpoints
 
         //Veterinarian endpoints
-
+                .antMatchers(HttpMethod.POST, "veterinarian/create").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "veterinarian/read").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "veterinarian/update").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "veterinarian/delete").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "veterinarian/getAll").hasRole("ADMIN")
         //Disable
             .and()
             .csrf().disable()
